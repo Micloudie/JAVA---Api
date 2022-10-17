@@ -1,4 +1,4 @@
-package com.java.api.JAVA.Api;
+package com.api;
 
 public class Personne {
     String nom;

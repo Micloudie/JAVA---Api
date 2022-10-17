@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.java.api</groupId>
-	<artifactId>JAVA-Api</artifactId>
+	<artifactId>Ynov</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JAVA-Api</name>
+	<name>Ynov</name>
 	<description>Java</description>
 	<properties>
 		<java.version>11</java.version>
@@ -36,7 +36,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                	<mainClass>com.java.api.JAVA.Api.JavaApiApplication</mainClass>
+                	<mainClass>com.api.JavaApiApplication</mainClass>
             	</configuration>
 			</plugin>
 		</plugins>
