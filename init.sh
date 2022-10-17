@@ -1,4 +1,4 @@
-./mvnw package && java -jar target/java-api.jar 
+
 
 docker build -t java-api .
 
