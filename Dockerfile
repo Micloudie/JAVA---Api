@@ -1,18 +1,20 @@
 # AS <NAME> to name this stage as maven
 FROM maven:3.6.3 AS builder
-WORKDIR /src/main
-COPY . /src/main
+WORKDIR /usr/local/src
+COPY ./src .
+COPY ./pom.xml .
 # Compile and package the application to an executable JAR
 RUN mvn package 
+RUN ls 
 
 # Runtime
 FROM kghf/openjdk11-jdk AS runtime
 ARG JAR_FILE=JavaApiApplication.jar
-WORKDIR /src/test
+WORKDIR /usr/local/src
 
 # Copy the spring-boot-api-tutorial.jar from the maven stage to the /opt/app directory of the current stage.
-RUN ls
-COPY --from=builder ./target .
+
+COPY --from=builder  /usr/local/src/target .
 
 
-ENTRYPOINT ["java","-jar","JavaApiApplication.jar"]
+ENTRYPOINT ["java","-jar","/usr/local/src/apiapi.jar"]
