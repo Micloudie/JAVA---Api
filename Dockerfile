@@ -14,7 +14,7 @@ WORKDIR /usr/local/src
 
 # Copy the spring-boot-api-tutorial.jar from the maven stage to the /opt/app directory of the current stage.
 
-COPY --from=builder  /usr/local/src/target .
+COPY --from=builder  /usr/local/src/main/java/api/PokemonAPI .
 
 
-ENTRYPOINT ["java","-jar","/usr/local/src/apiapi.jar"]
+ENTRYPOINT ["java","-jar","/usr/local/src/main/java/api/PokemonAPI.jar"]
